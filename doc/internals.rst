@@ -124,14 +124,14 @@ using)::
     /* Hello {{ name }} */
     class __TwigTemplate_1121b6f109fe93ebe8c6e22e3712bceb extends Template
     {
-        protected function doDisplay(array $context, array $blocks = [])
+        protected function doDisplay(array $context, array $blocks = []): \Generator
         {
             $macros = $this->macros;
             // line 1
             yield "Hello ";
             // line 2
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["name"]) || array_key_exists("name", $context) ? $context["name"] : (function () { throw new RuntimeError('Variable "name" does not exist.', 2, $this->source); })()), "html", null, true);
-            return; yield '';
+
         }
 
         // some more code

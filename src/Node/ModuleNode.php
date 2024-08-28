@@ -313,7 +313,7 @@ final class ModuleNode extends Node
     protected function compileDisplay(Compiler $compiler)
     {
         $compiler
-            ->write("protected function doDisplay(array \$context, array \$blocks = [])\n", "{\n")
+            ->write("protected function doDisplay(array \$context, array \$blocks = []): \Generator\n", "{\n")
             ->indent()
             ->write("\$macros = \$this->macros;\n")
             ->subcompile($this->getNode('display_start'))
@@ -346,10 +346,6 @@ final class ModuleNode extends Node
         }
 
         $compiler->subcompile($this->getNode('display_end'));
-
-        if (!$this->hasNode('parent')) {
-            $compiler->write("return; yield '';\n"); // ensure at least one yield call even for templates with no output
-        }
 
         $compiler
             ->outdent()

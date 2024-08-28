@@ -33,11 +33,10 @@ class BlockTest extends NodeTestCase
         $tests = [];
         $tests[] = [new BlockNode('foo', new TextNode('foo', 1), 1), <<<EOF
 // line 1
-public function block_foo(\$context, array \$blocks = [])
+public function block_foo(\$context, array \$blocks = []): \Generator
 {
     \$macros = \$this->macros;
     yield "foo";
-    return; yield '';
 }
 EOF
             , new Environment(new ArrayLoader()),

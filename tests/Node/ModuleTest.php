@@ -92,12 +92,11 @@ class __TwigTemplate_%x extends Template
         ];
     }
 
-    protected function doDisplay(array \$context, array \$blocks = [])
+    protected function doDisplay(array \$context, array \$blocks = []): \Generator
     {
         \$macros = \$this->macros;
         // line 1
         yield "foo";
-        return; yield '';
     }
 
     /**

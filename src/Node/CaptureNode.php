@@ -36,10 +36,9 @@ class CaptureNode extends Node
         }
         $compiler
             ->raw($useYield ? "implode('', iterator_to_array(" : '\\Twig\\Extension\\CoreExtension::captureOutput(')
-            ->raw("(function () use (&\$context, \$macros, \$blocks) {\n")
+            ->raw("(function () use (&\$context, \$macros, \$blocks): \Generator {\n")
             ->indent()
             ->subcompile($this->getNode('body'))
-            ->write("return; yield '';\n")
             ->outdent()
             ->write('})()')
         ;

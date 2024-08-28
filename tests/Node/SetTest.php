@@ -55,9 +55,8 @@ EOF
         if ($this->getEnvironment()->useYield()) {
             $tests[] = [$node, <<<EOF
 // line 1
-\$context["foo"] = ('' === \$tmp = implode('', iterator_to_array((function () use (&\$context, \$macros, \$blocks) {
+\$context["foo"] = ('' === \$tmp = implode('', iterator_to_array((function () use (&\$context, \$macros, \$blocks): \Generator {
     yield "foo";
-    return; yield '';
 })(), false))) ? '' : new Markup(\$tmp, \$this->env->getCharset());
 EOF
                 , new Environment(new ArrayLoader()),
@@ -65,9 +64,8 @@ EOF
         } else {
             $tests[] = [$node, <<<'EOF'
 // line 1
-$context["foo"] = ('' === $tmp = \Twig\Extension\CoreExtension::captureOutput((function () use (&$context, $macros, $blocks) {
+$context["foo"] = ('' === $tmp = \Twig\Extension\CoreExtension::captureOutput((function () use (&$context, $macros, $blocks): \Generator {
     yield "foo";
-    return; yield '';
 })())) ? '' : new Markup($tmp, $this->env->getCharset());
 EOF
                 , new Environment(new ArrayLoader()),

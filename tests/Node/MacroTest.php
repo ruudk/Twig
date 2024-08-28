@@ -59,9 +59,8 @@ public function macro_foo(\$__foo__ = null, \$__bar__ = "Foo", ...\$__varargs__)
 
     \$blocks = [];
 
-    return new Markup(implode('', iterator_to_array((function () use (\$context, \$macros, \$blocks) {
+    return new Markup(implode('', iterator_to_array((function () use (\$context, \$macros, \$blocks): \Generator {
         yield "foo";
-        return; yield '';
     })(), false)), \$this->env->getCharset());
 }
 EOF
