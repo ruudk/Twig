@@ -60,7 +60,7 @@ abstract class Template
     /**
      * Returns debug information about the template.
      *
-     * @return array Debug information
+     * @return array<int, int> Debug information
      */
     abstract public function getDebugInfo();
 
