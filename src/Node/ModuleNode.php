@@ -17,6 +17,7 @@ use Twig\Compiler;
 use Twig\Node\Expression\AbstractExpression;
 use Twig\Node\Expression\ConstantExpression;
 use Twig\Source;
+use Twig\Template;
 
 /**
  * Represents a module node.
@@ -170,7 +171,13 @@ final class ModuleNode extends Node
             ->raw(" extends Template\n")
             ->write("{\n")
             ->indent()
+            ->write("/**\n")
+            ->write(" * @return Source\n")
+            ->write(" */\n")
             ->write("private \$source;\n")
+            ->write("/**\n")
+            ->write(" * @return array<string, Template>\n")
+            ->write(" */\n")
             ->write("private \$macros = [];\n\n")
         ;
     }

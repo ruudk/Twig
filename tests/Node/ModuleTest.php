@@ -77,7 +77,13 @@ use Twig\Template;
 /* foo.twig */
 class __TwigTemplate_%x extends Template
 {
+    /**
+     * @return Source
+     */
     private \$source;
+    /**
+     * @return array<string, Template>
+     */
     private \$macros = [];
 
     public function __construct(Environment \$env)
@@ -113,7 +119,7 @@ class __TwigTemplate_%x extends Template
      */
     public function getDebugInfo()
     {
-        return array (  38 => 1,);
+        return array (  44 => 1,);
     }
 
     public function getSourceContext()
@@ -149,7 +155,13 @@ use Twig\Template;
 /* foo.twig */
 class __TwigTemplate_%x extends Template
 {
+    /**
+     * @return Source
+     */
     private \$source;
+    /**
+     * @return array<string, Template>
+     */
     private \$macros = [];
 
     public function __construct(Environment \$env)
@@ -199,7 +211,7 @@ class __TwigTemplate_%x extends Template
      */
     public function getDebugInfo()
     {
-        return array (  44 => 1,  42 => 2,  35 => 1,);
+        return array (  50 => 1,  48 => 2,  41 => 1,);
     }
 
     public function getSourceContext()
@@ -240,7 +252,13 @@ use Twig\Template;
 /* foo.twig */
 class __TwigTemplate_%x extends Template
 {
+    /**
+     * @return Source
+     */
     private \$source;
+    /**
+     * @return array<string, Template>
+     */
     private \$macros = [];
 
     public function __construct(Environment \$env)
@@ -289,7 +307,7 @@ class __TwigTemplate_%x extends Template
      */
     public function getDebugInfo()
     {
-        return array (  44 => 2,  42 => 4,  35 => 2,);
+        return array (  50 => 2,  48 => 4,  41 => 2,);
     }
 
     public function getSourceContext()
