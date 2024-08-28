@@ -112,6 +112,9 @@ abstract class Template
         return false;
     }
 
+    /**
+     * @return bool
+     */
     public function isTraitable()
     {
         return true;
