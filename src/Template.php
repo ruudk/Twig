@@ -107,6 +107,9 @@ abstract class Template
         return $this->parents[$parent];
     }
 
+    /**
+     * @return self|TemplateWrapper|false The parent template or false if there is no parent
+     */
     protected function doGetParent(array $context)
     {
         return false;
