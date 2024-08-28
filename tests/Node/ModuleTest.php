@@ -78,11 +78,11 @@ use Twig\Template;
 class __TwigTemplate_%x extends Template
 {
     /**
-     * @return Source
+     * @var Source
      */
     private \$source;
     /**
-     * @return array<string, Template>
+     * @var array<string, Template>
      */
     private \$macros = [];
 
@@ -156,11 +156,11 @@ use Twig\Template;
 class __TwigTemplate_%x extends Template
 {
     /**
-     * @return Source
+     * @var Source
      */
     private \$source;
     /**
-     * @return array<string, Template>
+     * @var array<string, Template>
      */
     private \$macros = [];
 
@@ -253,11 +253,11 @@ use Twig\Template;
 class __TwigTemplate_%x extends Template
 {
     /**
-     * @return Source
+     * @var Source
      */
     private \$source;
     /**
-     * @return array<string, Template>
+     * @var array<string, Template>
      */
     private \$macros = [];
 

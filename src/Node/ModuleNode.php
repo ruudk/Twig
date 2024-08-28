@@ -172,11 +172,11 @@ final class ModuleNode extends Node
             ->write("{\n")
             ->indent()
             ->write("/**\n")
-            ->write(" * @return Source\n")
+            ->write(" * @var Source\n")
             ->write(" */\n")
             ->write("private \$source;\n")
             ->write("/**\n")
-            ->write(" * @return array<string, Template>\n")
+            ->write(" * @var array<string, Template>\n")
             ->write(" */\n")
             ->write("private \$macros = [];\n\n")
         ;
